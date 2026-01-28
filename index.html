@@ -1,24 +1,72 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>صفحة بسيطة</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-family: Arial, sans-serif;
-      font-size: 40px;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اقتباس</title>
+    <style>
+        /* تصميم الجسم */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            text-align: center;
+            direction: rtl; /* لجعل النص من اليمين لليسار */
+        }
+
+        /* تصميم الصندوق */
+        .quote-box {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            max-width: 800px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* تصميم النص */
+        .quote-box h1 {
+            font-size: 2em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .quote-box p {
+            font-size: 1.2em;
+            color: #ffd700;
+            margin-top: 0;
+        }
+
+        /* تأثير دخول الصفحة */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* تصميم استجابة الهواتف */
+        @media (max-width: 600px) {
+            .quote-box h1 {
+                font-size: 1.5em;
+            }
+            .quote-box p {
+                font-size: 1em;
+            }
+            .quote-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  شافع عمك وعم الجميع 💥💥
+    <div class="quote-box">
+        <h1>كلما ابتعد الشخص عن الأشخاص الكهول في عقلهم،<br>كلما اقترب من هدفه.</h1>
+        <p>تذكر، كل شخص لديه هدف في الحياة.</p>
+    </div>
 </body>
 </html>
